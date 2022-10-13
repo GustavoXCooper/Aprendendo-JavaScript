@@ -1,7 +1,14 @@
-function nomeCompleto(nome, sobrenome){
-    console.log(`${nome} ${sobrenome}`)
+/*
+function maiorDeIdade(idade){
+    if (idade >= 18) {
+        return true
+    } else {
+        return false
+    }
 }
-
-nomeCompleto('Gustavo', 'Cooper');
-
-nomeCompleto('Marina', 'Gonzalez');
+verificacao = maiorDeIdade(15)
+console.log(verificacao)
+*/
+ function maiorDeIdade(idade){
+    return (idade >= 18 ? true : false)
+ }
