@@ -8,4 +8,3 @@ let personagem = {
 }
 
 console.log(`Nome: ${personagem.nome} \nIdade: ${personagem.idade} \nJogo favorito: ${personagem.jogos[0].nome} (${personagem.jogos[0].genero})`)
-
