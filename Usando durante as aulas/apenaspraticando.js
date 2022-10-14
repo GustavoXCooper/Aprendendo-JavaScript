@@ -1,14 +1,18 @@
-/*
-function maiorDeIdade(idade){
-    if (idade >= 18) {
-        return true
-    } else {
-        return false
-    }
+/*function square(x){
+    return x * x
 }
-verificacao = maiorDeIdade(15)
-console.log(verificacao)
+function addSquares (a, b){
+    let squareA = square(a)
+    let squareB = square(b)
+    return squareA + squareB
+}
+
 */
- function maiorDeIdade(idade){
-    return (idade >= 18 ? true : false)
- }
+function addSquares (a, b){
+    const square = (x) => x * x
+
+    let squareA = square(a)
+    let squareB = square(b)
+    return squareA + squareB
+}
+console.log(addSquares(3,2))
