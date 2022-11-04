@@ -150,3 +150,17 @@ img{
     width: 90px;
     height: 50px;
 }
+
+.aviso--grande{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.aviso--gigante{
+    font-size: 70px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
