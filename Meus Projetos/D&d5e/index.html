@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 5e Character Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dices">
+        <div class="dice" data-dice="4">d4</div>
+        <div class="dice" data-dice="6">d6</div>
+        <div class="dice" data-dice="8">d8</div>
+        <div class="dice" data-dice="10">d10</div>
+        <div class="dice" data-dice="12">d12</div>
+        <div class="dice" data-dice="20">d20</div>
+        <div class="dice" data-dice="100">d100</div>
+    </div>
+    <div class="charactersheet">
+        <div class="header">
+            <div class="basicinfo">
+                <input type="text" id="charactername" placeholder="Character Name">
+                <div class="level">Level</div>
+            </div>
+            <div class="characterinfo">
+                <input type="text" id="class" placeholder="Class">
+                <input type="text" id="background" placeholder="Background">
+                <input type="text" id="player-name" placeholder="Player Name">
+                <input type="text" id="race" placeholder="Race">
+                <input type="text" id="alignment" placeholder="Alignment">
+                <input type="number" id="exp" placeholder="Experience Points">
+            </div>
+        </div>
+        <div class="details">
+            <div class="infoA">
+                <div class="stats">
+                    <div>
+                        <span data-stat="STR">0</span>
+                    <input placeholder="STR" type="number">
+                    </div>
+                    <div>
+                        <span data-stat="DEX">0</span>
+                    <input placeholder="DEX" type="number">
+                    </div>
+                    <div>
+                        <span data-stat="CON">0</span>
+                    <input placeholder="CON" type="number">
+                    </div>
+                    <div>
+                        <span data-stat="DEX">0</span>
+                    <input placeholder="INT" type="number">
+                    </div>
+                    <div>
+                        <span data-stat="DEX">0</span>
+                    <input placeholder="WIS" type="number">
+                    </div>
+                    <div>
+                        <span data-stat="DEX">0</span>
+                    <input placeholder="CAR" type="number">
+                    </div>
+                </div>
+                <div class="other-skills">
+                    <div class="inspiration">
+                        <input type="checkbox"> 
+                        Inspiration
+                    </div>
+                    <div class="proficiency">
+                        <span>2</span>
+                        Proficiency Bonus
+                    </div>
+                    <div class="saving-throws">
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Strength
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Dexterity
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Constitution
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Inteligence
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Wisdom
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span></span>Charisma
+                        </span>
+                        <span>Saving Throws</span>
+                            
+                    </div>
+                    <div class="skills">
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="DEX"></span>Acrobatics <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="WIS"></span>Animal Handling <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="INT"></span>Arcana <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="STR"></span>Athletics <span>0</span>   
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="CAR"></span>Deception <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="INT"></span>History <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="WIS"></span>Insight <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="CAR"></span>Intimidation <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="INT"></span>Investigation <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="WIS"></span>Medicine <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="INT"></span>Nature <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="WIS"></span>Perception <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="CAR"></span>Performance <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="CAR"></span>Persuasion <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="INT"></span>Religion <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="DEX"></span>Sleight of Hand <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="DEX"></span>Stealth <span>0</span>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <span data-stats="WIS"></span>Survival <span>0</span>
+                        </span>
+                        <span>Skills</span>
+                    </div>
+                    <span class="passive-perception">Passive Perception</span>
+                </div>
+            </div>
+            <div class="infoB">
+                <div class="combat-stats">
+                    <span class="armor-class">
+                        Armor Class 
+                        <input type="number">
+                    </span>
+                    <span class="initiative">
+                        Initiative
+                        <span lass="initiative-mod">0</span>
+                    </span>
+                    <span class="speed"> 
+                        Speed
+                        <input type="number">
+                    </span>
+                </div>
+                <div class="hp">
+                    Total HP<input type="number">
+                </div>
+                <div class="current-hp">
+                    Current HP<input type="number">
+                </div>
+                <div class="temporary-hp">
+                    Temporary HP<input type="number">
+                </div>
+                <div class="hp-dice">
+                    <div class="hit-dice">
+                        <input type="number">
+                        <input type="number">
+                        <span>Hit Dice</span>
+                    </div>
+                    <div class="death-saves">
+                        Successes <span><input type="checkbox"> <input type="checkbox"> <input type="checkbox"></span>
+                        Failures <span><input type="checkbox"> <input type="checkbox"> <input type="checkbox"></span>
+                    </div>
+                </div>
+                <div class="other-proficiencies">
+                    <textarea> </textarea>
+                    <span>Languages and other proficiencies</span>
+                </div>
+            </div>
+            <div class="InfoC">
+                <div class="personality">
+                    <textarea></textarea>
+                    <span>Personality Traits</span>
+                    <textarea></textarea>
+                    <span>Ideas</span>
+                    <textarea></textarea>
+                    <span>Bonds</span>
+                    <textarea></textarea>
+                    <span>Flaws</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <span id="diceResult" class="result-disabled">Dice roll</span>
+    
+    <script src="script.js"></script>
+</body>
+</html>

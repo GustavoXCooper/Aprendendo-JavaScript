@@ -1,0 +1,230 @@
+input{
+    border:none;
+    border-bottom: 1px solid grey;
+    padding: 2px 3px 1px 3px;
+    outline: none;
+    margin: 5px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+
+.charactersheet{
+    background-color: white;
+    position:absolute;
+    left: 17%;
+    width: 900px;
+    height: 1000px;
+    border: black solid 2px;
+    margin: 50px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: black solid 2px;
+    margin: 10px;
+}
+.basicinfo{
+    display: flex;
+    flex-direction: column;
+}
+.level{
+    margin-left: 6px;
+}
+#charactername{
+    height: 15px;
+}
+.characterinfo{
+    width: 80%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.infoA{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 20px 20px 20px;
+}
+.infoB, .infoC{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px 20px 20px;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    margin-top: 55px;
+    width: 60px;
+
+}
+.stats input{
+    width: 30px;
+}
+.stat{
+    background-color: rgb(63, 60, 60) ;
+    padding: 5px;
+    border-radius: 100%;
+}
+.other-skills{
+    margin-left: 20px;
+}
+.proficiency span{
+    margin-left: 5px;
+    border-bottom: rgb(63, 60, 60) solid 1px;
+}
+.saving-throws{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 170px;
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: column ;
+    border: 2px solid black;
+    margin: 5px 0px 10px 0px;
+    padding: 5px;
+}
+
+.other-proficiencies{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+.other-proficiencies textarea{
+    height: 200px;
+    width: 245px;
+    resize: none;
+}
+.other-proficiencies span{
+    font-size: 14px;
+}
+
+.combat-stats{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+.combat-stats span{
+    height: 50px;
+    width: 80px;
+    display: flex ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.combat-stats input{
+    width: 20px;
+}
+.personality{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.personality textarea{
+    width: 250px;
+    height: 100px;
+    resize: none;   
+}
+
+.current-hp, .temporary-hp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+.hp-dice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.death-saves{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.death-saves span{
+    display: flex;
+    flex-direction: row;
+}
+.hit-dice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hit-dice input{
+    width: 50px;
+}
+
+
+
+
+/* dice related */
+.dices{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-bottom: black solid 2px;
+    background-color: rgb(63, 60, 60);
+}
+.dice{
+    height: 40px;
+    width: 50px;
+    border-radius: 100%;
+    border: solid black 1px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+#diceResult{
+    position:fixed;
+    bottom: 5%;
+    left: 1%;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.result-disabled{
+    border-bottom: rgb(63, 60, 60) solid 2px;
+    color:black;
+    background-color: grey;
+}
+.result-active{
+    border-bottom: rgb(228, 20, 20) solid 2px;
+    color: rgb(228, 20, 20);
+    background-color: rgb(63, 60, 60);
+}
+

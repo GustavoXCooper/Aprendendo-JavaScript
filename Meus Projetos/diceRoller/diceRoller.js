@@ -20,7 +20,7 @@ function rollD6(Event){
 }
 */
 
-function rollD6(Event){
+function rollD6(){
     for ( let i = 1; i <= diceRolled; i++){
         let res = Math.floor(((Math.random()) * 6) + 1);
         allRes[i-1] = [res]
