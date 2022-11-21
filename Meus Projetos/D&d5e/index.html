@@ -34,31 +34,24 @@
         </div>
         <div class="details">
             <div class="infoA">
-                <div class="stats">
-                    <div>
-                        <span data-stat="STR">0</span>
-                    <input placeholder="STR" type="number">
-                    </div>
-                    <div>
-                        <span data-stat="DEX">0</span>
-                    <input placeholder="DEX" type="number">
-                    </div>
-                    <div>
-                        <span data-stat="CON">0</span>
-                    <input placeholder="CON" type="number">
-                    </div>
-                    <div>
-                        <span data-stat="DEX">0</span>
-                    <input placeholder="INT" type="number">
-                    </div>
-                    <div>
-                        <span data-stat="DEX">0</span>
-                    <input placeholder="WIS" type="number">
-                    </div>
-                    <div>
-                        <span data-stat="DEX">0</span>
-                    <input placeholder="CAR" type="number">
-                    </div>
+                <div class="stats">    
+                    <span id="mod_STR">0</span>
+                    <input data-item="STR" id="STR" placeholder="STR" type="number"><br/>
+
+                    <span id="mod_DEX">0</span>
+                    <input  data-item="DEX" id="DEX" placeholder="DEX" type="number"><br/>
+                    
+                    <span id="mod_CON">0</span>
+                    <input  data-item="CON" id="CON" placeholder="CON" type="number"><br/>
+                    
+                    <span id="mod_INT">0</span>
+                    <input  data-item="INT" id="INT" placeholder="INT" type="number"><br/>
+                                    
+                    <span id="mod_WIS">0</span>
+                    <input  data-item="WIS" id="WIS" placeholder="WIS" type="number"><br/>
+                    
+                    <span id="mod_CAR">0</span>
+                    <input  data-item="CAR" id="CAR" placeholder="CAR"  type="number"><br/>
                 </div>
                 <div class="other-skills">
                     <div class="inspiration">
@@ -72,30 +65,30 @@
                     <div class="saving-throws">
                         <span>
                             <input type="checkbox">
-                            <span></span>Strength
+                            Strength <span>0</span>
                         </span>
                         <span>
                             <input type="checkbox">
-                            <span></span>Dexterity
+                            Dexterity <span>0</span>
                         </span>
                         <span>
                             <input type="checkbox">
-                            <span></span>Constitution
+                            Constitution <span>0</span>
                         </span>
                         <span>
                             <input type="checkbox">
-                            <span></span>Inteligence
+                            Inteligence <span>0</span>
                         </span>
                         <span>
                             <input type="checkbox">
-                            <span></span>Wisdom
+                            Wisdom <span>0</span>
                         </span>
                         <span>
                             <input type="checkbox">
-                            <span></span>Charisma
+                            Charisma <span>0</span>
                         </span>
                         <span>Saving Throws</span>
-                            
+
                     </div>
                     <div class="skills">
                         <span>
@@ -202,6 +195,7 @@
                 <div class="hp-dice">
                     <div class="hit-dice">
                         <input type="number">
+                        <span>Total</span>
                         <input type="number">
                         <span>Hit Dice</span>
                     </div>
@@ -230,8 +224,10 @@
             </div>
         </div>
     </div>
-    <span id="diceResult" class="result-disabled">Dice roll</span>
-    
+    <div id="dice-results">
+        <span class="result_title">Dice roll</span>
+        <span class="diceResult result-disable"></span>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
