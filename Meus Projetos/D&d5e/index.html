@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&D 5e Character Sheet</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="character.js"></script>
 </head>
 <body>
     <div class="dices">
@@ -21,35 +22,41 @@
         <div class="header">
             <div class="basicinfo">
                 <input type="text" id="charactername" placeholder="Character Name">
-                <div class="level">Level</div>
+                <div id="level">Level <input class="level" type="number"> </div>
             </div>
             <div class="characterinfo">
-                <input type="text" id="class" placeholder="Class">
-                <input type="text" id="background" placeholder="Background">
-                <input type="text" id="player-name" placeholder="Player Name">
-                <input type="text" id="race" placeholder="Race">
-                <input type="text" id="alignment" placeholder="Alignment">
-                <input type="number" id="exp" placeholder="Experience Points">
+                <input type="text" data-info="class" id="class" placeholder="Class">
+                <input type="text" data-info="background" id="background" placeholder="Background">
+                <input type="text" data-info="player-name" id="player-name" placeholder="Player Name">
+                <input type="text" data-info="race" id="race" placeholder="Race">
+                <input type="text" data-info="alignment" id="alignment" placeholder="Alignment">
+                <input type="number" data-info="exp" id="exp" placeholder="Experience Points">
             </div>
         </div>
         <div class="details">
             <div class="infoA">
-                <div class="stats">    
+                <div class="stats">
+                    <span class="stat">STR</span>    
                     <span id="mod_STR">0</span>
                     <input data-item="STR" id="STR" placeholder="STR" type="number"><br/>
 
+                    <span class="stat">DEX</span>
                     <span id="mod_DEX">0</span>
                     <input  data-item="DEX" id="DEX" placeholder="DEX" type="number"><br/>
                     
+                    <span class="stat">CON</span>
                     <span id="mod_CON">0</span>
                     <input  data-item="CON" id="CON" placeholder="CON" type="number"><br/>
                     
+                    <span class="stat">INT</span>
                     <span id="mod_INT">0</span>
                     <input  data-item="INT" id="INT" placeholder="INT" type="number"><br/>
                                     
+                    <span class="stat">WIS</span>
                     <span id="mod_WIS">0</span>
                     <input  data-item="WIS" id="WIS" placeholder="WIS" type="number"><br/>
                     
+                    <span class="stat">CAR</span>
                     <span id="mod_CAR">0</span>
                     <input  data-item="CAR" id="CAR" placeholder="CAR"  type="number"><br/>
                 </div>
@@ -64,127 +71,127 @@
                     </div>
                     <div class="saving-throws">
                         <span>
-                            <input type="checkbox">
-                            Strength <span>0</span>
+                            <input data-saving-throw='str' value='unchecked' type="checkbox">
+                            Strength <span id="saving-str" >0</span>
                         </span>
                         <span>
-                            <input type="checkbox">
-                            Dexterity <span>0</span>
+                            <input data-saving-throw='dex' value='unchecked'type="checkbox">
+                            Dexterity <span id="saving-dex">0</span>
                         </span>
                         <span>
-                            <input type="checkbox">
-                            Constitution <span>0</span>
+                            <input data-saving-throw='con' value='unchecked' type="checkbox">
+                            Constitution <span id="saving-con">0</span>
                         </span>
                         <span>
-                            <input type="checkbox">
-                            Inteligence <span>0</span>
+                            <input data-saving-throw='int' value='unchecked' type="checkbox">
+                            Inteligence <span id="saving-int">0</span>
                         </span>
                         <span>
-                            <input type="checkbox">
-                            Wisdom <span>0</span>
+                            <input data-saving-throw='wis' value='unchecked' type="checkbox">
+                            Wisdom <span id="saving-wis">0</span>
                         </span>
                         <span>
-                            <input type="checkbox">
-                            Charisma <span>0</span>
+                            <input data-saving-throw='car' value='unchecked'type="checkbox">
+                            Charisma <span id="saving-car">0</span>
                         </span>
                         <span>Saving Throws</span>
 
                     </div>
                     <div class="skills">
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="DEX"></span>Acrobatics <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="WIS"></span>Animal Handling <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="INT"></span>Arcana <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="STR"></span>Athletics <span>0</span>   
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="CAR"></span>Deception <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="INT"></span>History <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="WIS"></span>Insight <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="CAR"></span>Intimidation <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="INT"></span>Investigation <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="WIS"></span>Medicine <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="INT"></span>Nature <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="WIS"></span>Perception <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="CAR"></span>Performance <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="CAR"></span>Persuasion <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="INT"></span>Religion <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="DEX"></span>Sleight of Hand <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="DEX"></span>Stealth <span>0</span>
-                        </span>
-                        <span>
-                            <input type="checkbox">
-                            <span data-stats="WIS"></span>Survival <span>0</span>
-                        </span>
+                        <div id="acrobatics" class="DEX">
+                            <input data-dex="acrobatics" type="checkbox">
+                            Acrobatics <span>0</span>
+                        </div>
+                        <div id="animal-handling" class="WIS">
+                            <input data-wis="animal-handling" type="checkbox">
+                            Animal Handling <span>0</span>
+                        </div>
+                        <div id="arcana" class="INT">
+                            <input data-int="arcana" type="checkbox">
+                            Arcana <span>0</span>
+                        </div>
+                        <div id="athletics" class="STR">
+                            <input data-str="athletics" type="checkbox">
+                            Athletics <span>0</span>   
+                        </div>
+                        <div id="deception" class="CAR">
+                            <input data-car="deception" type="checkbox">
+                            Deception <span>0</span>
+                        </div>
+                        <div id="history" class="INT">
+                            <input data-int="history" type="checkbox">
+                            History <span>0</span>
+                        </div>
+                        <div id="insight"class="WIS" >
+                            <input data-wis="insight" type="checkbox">
+                            Insight <span>0</span>
+                        </div>
+                        <div id="intimidation" class="CAR">
+                            <input data-car="intimidation" type="checkbox">
+                            Intimidation <span>0</span>
+                        </div>
+                        <div id="investigation" class="INT">
+                            <input data-int="investigation" type="checkbox">
+                            Investigation <span>0</span>
+                        </div>
+                        <div id="medicine" class="WIS">
+                            <input data-wis="medicine" type="checkbox">
+                            Medicine <span>0</span>
+                        </div>
+                        <div id="nature" class="INT">
+                            <input data-int="nature" type="checkbox">
+                            Nature <span>0</span>
+                        </div>
+                        <div id="perception" class="WIS" >
+                            <input data-wis="perception" type="checkbox">
+                            Perception <span>0</span>
+                        </div>
+                        <div id="performance" class="CAR">
+                            <input data-car="performance" type="checkbox">
+                            Performance <span>0</span>
+                        </div>
+                        <div id="persuasion" class="CAR">
+                            <input data-car="persuasion" type="checkbox">
+                            Persuasion <span>0</span>
+                        </div>
+                        <div id="religion" class="INT">
+                            <input data-int="religion" type="checkbox">
+                            Religion <span>0</span>
+                        </div>
+                        <div id="sleight-of-hand" class="DEX">
+                            <input data-dex="sleight-of-hand" type="checkbox">
+                            Sleight of Hand <span>0</span>
+                        </div>
+                        <div id="stealth" class="DEX">
+                            <input data-dex="stealth" type="checkbox">
+                            Stealth <span>0</span>
+                        </div>
+                        <div id="survival" class="WIS">
+                            <input data-wis="survival" type="checkbox">
+                            Survival <span>0</span>
+                        </div>
                         <span>Skills</span>
                     </div>
-                    <span class="passive-perception">Passive Perception</span>
+                    <span class="passive-perception">Passive Perception <span></span></span>
                 </div>
             </div>
             <div class="infoB">
                 <div class="combat-stats">
-                    <span class="armor-class">
+                    <span class="combat-stat">
                         Armor Class 
-                        <input type="number">
+                        <input id="armor-class" type="number">
                     </span>
-                    <span class="initiative">
+                    <span id="initiative">
                         Initiative
-                        <span lass="initiative-mod">0</span>
+                        <span>0</span>
                     </span>
-                    <span class="speed"> 
+                    <span class="combat-stat"> 
                         Speed
-                        <input type="number">
+                        <input id="speed" class="combat-stat" type="number">
                     </span>
                 </div>
                 <div class="hp">
-                    Total HP<input type="number">
+                    Total HP<input id='total-hp' type="number">
                 </div>
                 <div class="current-hp">
                     Current HP<input type="number">
@@ -205,19 +212,20 @@
                     </div>
                 </div>
                 <div class="other-proficiencies">
-                    <textarea> </textarea>
+                    <textarea id="languages-prof"> 
+                    </textarea>
                     <span>Languages and other proficiencies</span>
                 </div>
             </div>
             <div class="InfoC">
                 <div class="personality">
-                    <textarea></textarea>
+                    <textarea id="traits"></textarea>
                     <span>Personality Traits</span>
-                    <textarea></textarea>
+                    <textarea id="ideas"></textarea>
                     <span>Ideas</span>
-                    <textarea></textarea>
+                    <textarea id="bonds"></textarea>
                     <span>Bonds</span>
-                    <textarea></textarea>
+                    <textarea id="flaws"></textarea>
                     <span>Flaws</span>
 
                 </div>
@@ -228,6 +236,7 @@
         <span class="result_title">Dice roll</span>
         <span class="diceResult result-disable"></span>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>

@@ -33,8 +33,12 @@ body{
     display: flex;
     flex-direction: column;
 }
-.level{
+#level{
     margin-left: 6px;
+}
+.level{
+    width: 30px;
+    text-align: center;
 }
 #charactername{
     height: 15px;
@@ -79,11 +83,6 @@ input::-webkit-inner-spin-button {
     width: 30px;
     text-align: center;
 }
-.stat{
-    background-color: rgb(63, 60, 60) ;
-    padding: 5px;
-    border-radius: 100%;
-}
 .other-skills{
     margin-left: 20px;
 }
@@ -99,7 +98,9 @@ input::-webkit-inner-spin-button {
     margin: 5px 0px 0px 0px;
     padding: 5px;
 }
-
+.stat{
+    font-size: 13px;
+}
 
 .skills{
     display: flex;
@@ -123,23 +124,20 @@ input::-webkit-inner-spin-button {
 .other-proficiencies span{
     font-size: 14px;
 }
-
 .combat-stats{
     display: flex;
     justify-content: space-between;
     width: 250px;
 }
-.combat-stats span{
-    height: 50px;
-    width: 80px;
-    display: flex ;
-    align-items: center;
-    flex-direction: column;
-    font-size: 14px;
-    margin-top: 5px;
+.combat-stat input{
+   width: 20px;
 }
-.combat-stats input{
-    width: 20px;
+.combat-stats span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 .personality{
     margin-top: 40px;
@@ -186,10 +184,9 @@ input::-webkit-inner-spin-button {
     width: 50px;
 }
 
-.stats span{
+#mod_STR, #mod_DEX, #mod_CON, #mod_WIS, #mod_INT, #mod_CAR{
     font-size: 18px;
     font-weight: 900;
-
 }
 
 
@@ -239,7 +236,7 @@ input::-webkit-inner-spin-button {
     border: solid rgb(100, 1, 1) 2px;
 }
 .old-roll{
-    width: 50px;
+    width: 70px;
     font-size: 13px;
     border-bottom: 1px solid black;
     text-align: start;
